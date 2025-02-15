@@ -12,7 +12,20 @@
   --color-gray-300: #878EA1;
   --color-gray-200: #C0C4CE;
   --color-gray-100: #E2E4E9;
-  --font-asap: 'Asap', serif;
-  --font-inconsolata: 'Inconsolata', serif;
-  --font-maven: 'Maven Pro', serif;
+  --font-title: 'Asap', serif;
+  --font-subtitle: 'Inconsolata', serif;
+  --font-text: 'Maven Pro', serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #292C34;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #878EA1;
+  border-radius: 8px;
 }
