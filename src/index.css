@@ -14,7 +14,9 @@
   --color-gray-100: #E2E4E9;
   --font-title: 'Asap', serif;
   --font-subtitle: 'Inconsolata', serif;
-  --font-text: 'Maven Pro', serif;
+  --font-sans: 'Maven Pro', serif;
+  --spacing-title: 120%;
+  --spacing-text: 140%;
 }
 
 ::-webkit-scrollbar {
