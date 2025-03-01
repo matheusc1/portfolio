@@ -9,9 +9,9 @@ export function Header() {
           alt="profile"
           className="rounded-full p-1 size-22"
         />
-        <LucideCode2 className='text-green size-8 absolute -bottom-2 -right-1.5 bg-gray-500 rounded-full' />
+        <LucideCode2 className="text-green size-8 absolute -bottom-2 -right-1.5 bg-gray-500 rounded-full" />
       </div>
-      
+
       <div className="space-y-2 mt-16">
         <p className="text-gray-200 font-subtitle leading-title text-xl">
           Hello! Meu nome é <span className="text-red">Matheus Cardoso</span> e
