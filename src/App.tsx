@@ -1,11 +1,12 @@
 import { Footer } from './components/footer'
 import { Header } from './components/header'
+import { Services } from './components/services'
 
 export function App() {
   return (
     <div className="h-dvh w-full mx-auto">
       <Header />
-      <div className="h-40">.</div>
+      <Services />
       <Footer />
     </div>
   )
