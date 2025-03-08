@@ -5,7 +5,7 @@ import { Services } from './components/services'
 export function App() {
   return (
     <div className="h-dvh w-full mx-auto">
-      <Header />,
+      <Header />
       <div className="min-h-[480px] bg-gray-500 space-y-14">
         <div className="pt-16 space-y-2 text-center">
           <p className="text-red font-subtitle leading-title text-xl">
