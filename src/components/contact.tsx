@@ -5,7 +5,7 @@ import {
   LucideMail,
 } from 'lucide-react'
 
-export function Footer() {
+export function Contact() {
   return (
     <div className="bg-[url(/bottom-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
       <div className="space-y-2">

@@ -1,4 +1,4 @@
-import { Footer } from './components/footer'
+import { Contact } from './components/contact'
 import { Header } from './components/header'
 import { Projects } from './components/projects'
 import { Services } from './components/services'
@@ -9,7 +9,7 @@ export function App() {
       <Header />
       <Projects />
       <Services />
-      <Footer />
+      <Contact />
     </div>
   )
 }
