@@ -1,4 +1,11 @@
 import { LucideChevronsDown, LucideCode2 } from 'lucide-react'
+import Next from '../assets/next.svg'
+import React from '../assets/react.svg'
+import JavaScript from '../assets/javascript.svg'
+import TypeScript from '../assets/typescript.svg'
+import GitHub from '../assets/github.svg'
+import Html from '../assets/html.svg'
+import Css from '../assets/css.svg'
 
 export function Header() {
   return (
@@ -30,24 +37,31 @@ export function Header() {
 
       <div className="flex justify-center gap-4 mt-20 flex-wrap">
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={React} alt="React logo" className="size-6" />
           <span className="text-gray-200 leading-text">React</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={Next} alt="Next.js logo" className="size-6" />
           <span className="text-gray-200 leading-text">Next.js</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={TypeScript} alt="Typescript logo" className="size-6" />
           <span className="text-gray-200 leading-text">TypeScript</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={JavaScript} alt="Javascript logo" className="size-6" />
           <span className="text-gray-200 leading-text">JavaScript</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={GitHub} alt="GitHub logo" className="size-6" />
           <span className="text-gray-200 leading-text">Github</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={Html} alt="HTML logo" className="size-6" />
           <span className="text-gray-200 leading-text">HTML</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
+          <img src={Css} alt="CSS logo" className="size-6" />
           <span className="text-gray-200 leading-text">CSS</span>
         </div>
       </div>
