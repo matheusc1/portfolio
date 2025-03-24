@@ -12,7 +12,7 @@ export function Projects() {
       <div className="flex flex-wrap items-center justify-center gap-6 pb-36">
         <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer hover:border-gray-300">
           <div className="bg-gray-300 w-[306px] h-[156px] rounded-lg" />
-          <div>
+          <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">Title</p>
             <span className="text-sm leading-text text-gray-200">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -20,19 +20,19 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer hover:border-gray-300">
-          <div className="bg-gray-300 w-[306px] h-[156px] rounded-lg" />
-          <div>
-            <p className="font-title leading-title text-gray-100">Title</p>
+        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
+          <img src="/exam-scheduler.png" alt="Exam Scheduler card" />
+          <div className="space-y-2">
+            <p className="font-title leading-title text-gray-100">Exam Scheduler</p>
             <span className="text-sm leading-text text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sistema completo para agendamento de avaliações.
             </span>
           </div>
         </div>
 
         <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer hover:border-gray-300">
           <div className="bg-gray-300 w-[306px] h-[156px] rounded-lg" />
-          <div>
+          <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">Title</p>
             <span className="text-sm leading-text text-gray-200">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
