@@ -10,12 +10,16 @@ export function Projects() {
         </h2>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-6 pb-36">
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer hover:border-gray-300">
-          <div className="bg-gray-300 w-[306px] h-[156px] rounded-lg" />
+        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
+          <div className="bg-gradient-to-br from-[#F4EDE4] to-[#5A3E36] w-[306px] h-[156px] rounded-lg flex items-center justify-center">
+            <span className="text-xl font-title leading-title text-gray-100 text-center">
+              Em construção...
+            </span>
+          </div>
           <div className="space-y-2">
-            <p className="font-title leading-title text-gray-100">Title</p>
+            <p className="font-title leading-title text-gray-100">MyBookList</p>
             <span className="text-sm leading-text text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Aplicação para registros de leituras e acompanhamento de métricas.
             </span>
           </div>
         </div>
@@ -23,19 +27,25 @@ export function Projects() {
         <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
           <img src="/exam-scheduler.png" alt="Exam Scheduler card" />
           <div className="space-y-2">
-            <p className="font-title leading-title text-gray-100">Exam Scheduler</p>
+            <p className="font-title leading-title text-gray-100">
+              Exam Scheduler
+            </p>
             <span className="text-sm leading-text text-gray-200">
               Sistema completo para agendamento de avaliações.
             </span>
           </div>
         </div>
 
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer hover:border-gray-300">
-          <div className="bg-gray-300 w-[306px] h-[156px] rounded-lg" />
+        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
+          <div className="bg-gradient-to-br from-[#00E5FF] to-[#002171] w-[306px] h-[156px] rounded-lg flex items-center justify-center">
+            <span className="text-xl font-title leading-title text-gray-100 text-center">
+              Em construção...
+            </span>
+          </div>
           <div className="space-y-2">
-            <p className="font-title leading-title text-gray-100">Title</p>
+            <p className="font-title leading-title text-gray-100">Outros</p>
             <span className="text-sm leading-text text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Lista de projetos menores e com fins de estudo.
             </span>
           </div>
         </div>
