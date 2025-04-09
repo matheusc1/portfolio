@@ -12,7 +12,7 @@ export function Contact() {
         <p className="text-purple font-subtitle leading-title text-xl">
           Contato
         </p>
-        <h2 className="text-gray-100 font-title leading-title text-2xl">
+        <h2 className="text-gray-100 font-title leading-title text-2xl text-shadow-sm/40">
           Gostou do meu trabalho?
         </h2>
         <span className="text-gray-200 leading-text">

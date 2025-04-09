@@ -24,7 +24,7 @@ export function Header() {
           Hello! Meu nome é <span className="text-red">Matheus Cardoso</span> e
           sou
         </p>
-        <h1 className="text-gray-100 font-title leading-title text-[3.5rem]">
+        <h1 className="text-gray-100 font-title leading-title text-[3.5rem] text-shadow-lg/40">
           Desenvolvedor Front-End
         </h1>
       </div>

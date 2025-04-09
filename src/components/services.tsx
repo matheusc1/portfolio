@@ -11,7 +11,7 @@ export function Services() {
         <p className="text-red font-subtitle leading-title text-xl">
           Meus serviços
         </p>
-        <h2 className="text-gray-100 font-title leading-title text-2xl">
+        <h2 className="text-gray-100 font-title leading-title text-2xl text-shadow-sm/40">
           Como posso ajudar seu negócio
         </h2>
       </div>

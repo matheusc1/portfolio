@@ -1,3 +1,5 @@
+import { NavLink } from "react-router"
+
 export function Projects() {
   return (
     <div className="min-h-[480px] bg-gray-500 space-y-14">
@@ -5,7 +7,7 @@ export function Projects() {
         <p className="text-red font-subtitle leading-title text-xl">
           Meu trabalho
         </p>
-        <h2 className="text-gray-100 font-title leading-title text-2xl">
+        <h2 className="text-gray-100 font-title leading-title text-2xl text-shadow-sm/40">
           Veja os projetos em destaque
         </h2>
       </div>
@@ -24,7 +26,7 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
+        <NavLink to="/exam-scheduler" className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
           <img src="/exam-scheduler.png" alt="Exam Scheduler card" />
           <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">
@@ -34,7 +36,7 @@ export function Projects() {
               Sistema completo para agendamento de avaliações.
             </span>
           </div>
-        </div>
+        </NavLink>
 
         <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
           <div className="bg-gradient-to-br from-[#00E5FF] to-[#002171] w-[306px] h-[156px] rounded-lg flex items-center justify-center">
