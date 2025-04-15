@@ -33,24 +33,10 @@ export function Projects() {
               Exam Scheduler
             </p>
             <span className="text-sm leading-text text-gray-200">
-              Sistema completo para agendamento de avaliações.
+              Aplicação Full Stack para agendamento de avaliações.
             </span>
           </div>
         </NavLink>
-
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
-          <div className="bg-gradient-to-br from-[#00E5FF] to-[#002171] w-[306px] h-[156px] rounded-lg flex items-center justify-center">
-            <span className="text-xl font-title leading-title text-gray-100 text-center">
-              Em construção...
-            </span>
-          </div>
-          <div className="space-y-2">
-            <p className="font-title leading-title text-gray-100">Outros</p>
-            <span className="text-sm leading-text text-gray-200">
-              Lista de projetos menores e com fins de estudo.
-            </span>
-          </div>
-        </div>
       </div>
     </div>
   )
