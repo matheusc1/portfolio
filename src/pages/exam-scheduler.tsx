@@ -19,16 +19,23 @@ export function ExamScheduler() {
 
       <section className="space-y-4 max-w-[728px]">
         <p className="text-gray-200 leading-text">
-          <strong className="font-bold text-gray-100">Exam Scheduler</strong> é um sistema
-          Full Stack criado para facilitar o agendamento de avaliações na
-          UNIFAA. A aplicação permite que estudantes agendem provas, que
-          coordenadores visualizem os agendamentos e que administradores
-          gerenciem dados acadêmicos e operacionais.
+          <strong className="font-bold text-gray-100">Exam Scheduler</strong> é
+          um sistema Full Stack criado para facilitar o agendamento de
+          avaliações na UNIFAA. A aplicação permite que estudantes agendem
+          provas, que coordenadores visualizem os agendamentos e que
+          administradores gerenciem dados acadêmicos e operacionais.
         </p>
         <p className="text-gray-200 leading-text">
           O projeto foi desenvolvido como parte da formação acadêmica em Análise
           e Desenvolvimento de Sistemas e é dividido em duas partes: uma API com
           Node.js + Fastify e um front-end em React.
+        </p>
+        <p className="text-gray-200 leading-text">
+          O projeto foi encerrado com um bom nível de conclusão, restando apenas
+          ajustes finais como mensagens de erro personalizadas e skeletons
+          durante o carregamento das informações. O encerramento ocorreu após
+          uma pausa no programa EAD da faculdade, o que retirou o principal foco
+          e propósito institucional do sistema.
         </p>
       </section>
 
@@ -60,15 +67,15 @@ export function ExamScheduler() {
 
       <section>
         <h3 className="font-semibold text-xl mb-2">🔗 Repositórios</h3>
-        <div className='mb-1'>
+        <div className="mb-1">
           <span>Front-End: </span>
           <a
-            href="https://github.com/matheusc1/unifaa-exam-scheduler"
+            href="https://github.com/matheusc1/exam-scheduler"
             className="text-blue-400 hover:underline mb-1"
             target="_blank"
             rel="noreferrer"
           >
-            github.com/matheusc1/unifaa-exam-scheduler
+            github.com/matheusc1/exam-scheduler
           </a>
         </div>
         <div>
