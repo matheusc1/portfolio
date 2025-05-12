@@ -12,9 +12,9 @@ export function Header() {
     <div className="bg-[url(/top-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
       <div className="relative inline-block rounded-full border-2 border-red mt-10">
         <img
-          src="https://github.com/matheusc1.png"
+          src="/avatar.jpg"
           alt="profile"
-          className="rounded-full p-1 size-22"
+          className="rounded-full p-1 size-24"
         />
         <LucideCode2 className="text-green size-8 absolute -bottom-2 -right-1.5 bg-gray-500 rounded-full" />
       </div>
