@@ -17,7 +17,7 @@ export function ExamScheduler() {
         </h2>
       </div>
 
-      <section className="space-y-4 max-w-[728px]">
+      <section className="space-y-4 max-w-[768px]">
         <p className="text-gray-200 leading-text">
           <strong className="font-bold text-gray-100">Exam Scheduler</strong> é
           um sistema Full Stack criado para facilitar o agendamento de
@@ -37,6 +37,36 @@ export function ExamScheduler() {
           uma pausa no programa EAD da faculdade, o que retirou o principal foco
           e propósito institucional do sistema.
         </p>
+      </section>
+
+      <section className="space-y-4 max-w-[768px]">
+        <h3 className="font-semibold text-xl mb-2">⚙️ Desafios técnicos</h3>
+        <ul className="list-disc list-inside space-y-1 text-gray-300">
+          <li>
+            Este foi meu primeiro projeto completo utilizando{' '}
+            <strong className="text-gray-100">Node.js e Fastify</strong>, o
+            que exigiu aprendizado prático da linguagem e do framework durante o
+            desenvolvimento.
+          </li>
+          <li>
+            Como ainda não tinha muita referência de projetos back-end, a{' '}
+            <strong className="text-gray-100">arquitetura da API</strong> foi um
+            desafio. Optei por uma estrutura que priorizasse a separação de
+            responsabilidades e a reutilização de código, mesmo sem saber se era
+            o padrão mais ideal.
+          </li>
+          <li>
+            A implementação da{' '}
+            <strong className="text-gray-100">
+              autenticação com controle de acesso
+            </strong>{' '}
+            também foi desafiadora. O sistema exigia regras diferentes para
+            estudantes, coordenadores e administradores, então precisei
+            estruturar uma lógica de{' '}
+            <strong className="text-gray-100">roles</strong> que garantisse a
+            segurança e o acesso adequado a cada rota.
+          </li>
+        </ul>
       </section>
 
       <section>
