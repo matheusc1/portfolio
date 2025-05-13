@@ -32,8 +32,8 @@ export function ExamScheduler() {
         </p>
         <p className="text-gray-200 leading-text">
           O projeto foi encerrado com um bom nível de conclusão, restando apenas
-          ajustes finais como mensagens de erro personalizadas e skeletons
-          durante o carregamento das informações. O encerramento ocorreu após
+          ajustes finais como mensagens de erro personalizadas, skeletons
+          durante o carregamento das informações e testes automatizados. O encerramento ocorreu após
           uma pausa no programa EAD da faculdade, o que retirou o principal foco
           e propósito institucional do sistema.
         </p>
