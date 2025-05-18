@@ -33,9 +33,9 @@ export function ExamScheduler() {
         <p className="text-gray-200 leading-text">
           O projeto foi encerrado com um bom nível de conclusão, restando apenas
           ajustes finais como mensagens de erro personalizadas, skeletons
-          durante o carregamento das informações e testes automatizados. O encerramento ocorreu após
-          uma pausa no programa EAD da faculdade, o que retirou o principal foco
-          e propósito institucional do sistema.
+          durante o carregamento das informações e testes automatizados. O
+          encerramento ocorreu após uma pausa no programa EAD da faculdade, o
+          que retirou o principal foco e propósito institucional do sistema.
         </p>
       </section>
 
@@ -44,8 +44,8 @@ export function ExamScheduler() {
         <ul className="list-disc list-inside space-y-1 text-gray-300">
           <li>
             Este foi meu primeiro projeto completo utilizando{' '}
-            <strong className="text-gray-100">Node.js e Fastify</strong>, o
-            que exigiu aprendizado prático da linguagem e do framework durante o
+            <strong className="text-gray-100">Node.js e Fastify</strong>, o que
+            exigiu aprendizado prático da linguagem e do framework durante o
             desenvolvimento.
           </li>
           <li>
