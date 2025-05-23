@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { App } from './app.tsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router'
-import { ExamScheduler } from './pages/exam-scheduler.tsx'
+import { ExamScheduler } from './pages/exam-scheduler/index.tsx'
 
 const router = createBrowserRouter([
   {
