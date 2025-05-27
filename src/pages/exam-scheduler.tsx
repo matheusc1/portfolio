@@ -120,6 +120,55 @@ export function ExamScheduler() {
           </a>
         </div>
       </section>
+
+      <section>
+        <h3 className="font-semibold text-xl mb-2">📸 Screenshots</h3>
+        <div className="flex flex-col gap-4">
+          <img
+            src="/screenshots/login-dark.png"
+            alt="Login modo claro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src="/screenshots/login-light.png"
+            alt="Login modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+
+          <img
+            src="/screenshots/enrollment-dark.png"
+            alt="Painel de matrículas modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src="/screenshots/enrollment-light.png"
+            alt="Painel de matrículas modo claro"
+            className="rounded-lg shadow-lg"
+          />
+
+          <img
+            src="/screenshots/schedules-dark.png"
+            alt="Avaliações agendadas modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src="/screenshots/schedules-light.png"
+            alt="Avaliações agendadas modo claro"
+            className="rounded-lg shadow-lg"
+          />
+
+          <img
+            src="/screenshots/schedule-dark.png"
+            alt="Painel de agendamento de avaliações para alunos modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src="/screenshots/schedule-light.png"
+            alt="Painel de agendamento de avaliações para alunos modo claro"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
     </div>
   )
 }
