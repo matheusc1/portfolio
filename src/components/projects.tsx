@@ -12,7 +12,10 @@ export function Projects() {
         </h2>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-6 pb-36">
-        <div className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300">
+        <NavLink
+          to="/my-book-list"
+          className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300"
+        >
           <div className="bg-gradient-to-br from-[#F4EDE4] to-[#5A3E36] w-[306px] h-[156px] rounded-lg flex items-center justify-center">
             <span className="text-xl font-title leading-title text-gray-100 text-center">
               Em construção...
@@ -24,7 +27,7 @@ export function Projects() {
               Aplicação para registros de leituras e acompanhamento de métricas.
             </span>
           </div>
-        </div>
+        </NavLink>
 
         <NavLink
           to="/exam-scheduler"
