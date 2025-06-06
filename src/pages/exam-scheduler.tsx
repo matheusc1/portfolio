@@ -7,7 +7,7 @@ export function ExamScheduler() {
       <div className="space-y-2">
         <NavLink
           to="/"
-          className="flex gap-2 items-center text-blue-400 hover:underline"
+          className="flex gap-2 items-center text-blue-400 font-medium hover:underline"
         >
           <LucideArrowLeft className="size-5" />
           Voltar
