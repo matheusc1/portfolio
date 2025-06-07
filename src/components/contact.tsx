@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import {
   LucideArrowUpRight,
   LucideGithub,
@@ -21,7 +22,11 @@ export function Contact() {
       </div>
 
       <div className="flex flex-col gap-4 mt-12">
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+          viewport={{ once: true }}
           className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
           href="https://www.linkedin.com/in/matheusc1/"
           target="_blank"
@@ -34,9 +39,13 @@ export function Contact() {
             </span>
           </div>
           <LucideArrowUpRight className="text-blue" />
-        </a>
+        </motion.a>
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          viewport={{ once: true }}
           className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
           href="https://github.com/matheusc1"
           target="_blank"
@@ -49,9 +58,13 @@ export function Contact() {
             </span>
           </div>
           <LucideArrowUpRight className="text-blue" />
-        </a>
+        </motion.a>
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
           className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
           href="mailto:cardoso.matheusbs@gmail.com"
           target="_blank"
@@ -64,7 +77,7 @@ export function Contact() {
             </span>
           </div>
           <LucideArrowUpRight className="text-blue" />
-        </a>
+        </motion.a>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import {
   LucideMonitorSmartphone,
   LucideDatabase,
@@ -15,8 +16,15 @@ export function Services() {
           Como posso ajudar seu negócio
         </h2>
       </div>
+
       <div className="flex flex-wrap items-center justify-center gap-6">
-        <div className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5"
+        >
           <LucideMonitorSmartphone className="size-10 text-purple" />
           <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">
@@ -26,8 +34,15 @@ export function Services() {
               Desenvolvimento de interfaces
             </span>
           </div>
-        </div>
-        <div className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5"
+        >
           <LucideDatabase className="size-10 text-yellow" />
           <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">
@@ -37,8 +52,15 @@ export function Services() {
               Criação de serviços do sistema
             </span>
           </div>
-        </div>
-        <div className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="border-2 border-gray-500 w-[280px] h-[155px] rounded-xl p-5 space-y-5"
+        >
           <LucidePalette className="size-10 text-green" />
           <div className="space-y-2">
             <p className="font-title leading-title text-gray-100">Design</p>
@@ -46,7 +68,7 @@ export function Services() {
               Criação e aprimoramento de telas
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

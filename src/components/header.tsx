@@ -6,8 +6,13 @@ import TypeScript from '../assets/typescript.svg'
 import GitHub from '../assets/github.svg'
 import Html from '../assets/html.svg'
 import Css from '../assets/css.svg'
+import { TypewriterTitle } from './type-write-title'
 
-export function Header() {
+type HeaderProps = {
+  onScrollClick: () => void
+}
+
+export function Header({ onScrollClick }: HeaderProps) {
   return (
     <div className="bg-[url(/top-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
       <div className="relative inline-block rounded-full border-2 border-red mt-10">
@@ -24,9 +29,7 @@ export function Header() {
           Hello! Meu nome é <span className="text-red">Matheus Cardoso</span> e
           sou
         </p>
-        <h1 className="text-gray-100 font-title leading-title text-[3.5rem] text-shadow-lg/40">
-          Desenvolvedor Front-End
-        </h1>
+        <TypewriterTitle title="Desenvolvedor Front-End" />
       </div>
 
       <p className="text-gray-300 max-w-[680px] text-sm leading-text mt-5">
@@ -66,7 +69,10 @@ export function Header() {
         </div>
       </div>
 
-      <LucideChevronsDown className="text-gray-300 mt-24 size-9 cursor-pointer" />
+      <LucideChevronsDown
+        onClick={onScrollClick}
+        className="text-gray-300 mt-24 size-9 cursor-pointer animate-bounce"
+      />
     </div>
   )
 }
