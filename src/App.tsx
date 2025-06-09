@@ -3,21 +3,23 @@ import { Header } from './components/header'
 import { Projects } from './components/projects'
 import { Services } from './components/services'
 import { Contact } from './components/contact'
+import { AboutMe } from './components/about-me'
 
 export function App() {
-  const projectsRef = useRef<HTMLDivElement>(null)
+  const aboutMeRef = useRef<HTMLDivElement>(null)
 
   const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: 'smooth' })
+    aboutMeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
     <div className="h-dvh w-full mx-auto">
       <Header onScrollClick={scrollToProjects} />
-
-      <div ref={projectsRef}>
-        <Projects />
+      <div ref={aboutMeRef}>
+        <AboutMe />
       </div>
+
+      <Projects />
 
       <Services />
       <Contact />
