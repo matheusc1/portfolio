@@ -17,7 +17,7 @@ export function Header({ onScrollClick }: HeaderProps) {
     <div className="bg-[url(/top-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
       <div className="relative inline-block rounded-full border-2 border-red mt-10">
         <img
-          src="/avatar.jpg"
+          src={`${import.meta.env.BASE_URL}avatar.jpg`}
           alt="profile"
           className="rounded-full p-1 size-24"
         />
