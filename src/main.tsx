@@ -5,6 +5,7 @@ import { App } from './app.tsx'
 import { createHashRouter, RouterProvider } from 'react-router'
 import { ExamScheduler } from './pages/exam-scheduler.tsx'
 import { MyBookList } from './pages/my-book-list.tsx'
+import { MovieCatalog } from './pages/movie-catalog.tsx'
 
 const router = createHashRouter([
   {
@@ -19,6 +20,10 @@ const router = createHashRouter([
   {
     path: '/my-book-list',
     Component: MyBookList,
+  },
+  {
+    path: '/movie-catalog',
+    Component: MovieCatalog,
   },
 ])
 

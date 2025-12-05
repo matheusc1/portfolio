@@ -41,6 +41,25 @@ export function Projects() {
           </NavLink>
 
           <NavLink
+            to="/movie-catalog"
+            className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}movie-catalog.png`}
+              alt="Exam Scheduler card"
+            />
+            <div className="space-y-2">
+              <p className="font-title leading-title text-gray-100">
+                Movie Catalog
+              </p>
+              <span className="text-sm leading-text text-gray-200">
+                Catálogo de filmes com pesquisa, informações detalhadas e
+                descoberta dos mais populares.
+              </span>
+            </div>
+          </NavLink>
+
+          <NavLink
             to="/exam-scheduler"
             className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300"
           >
