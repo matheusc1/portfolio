@@ -108,7 +108,40 @@ export function MovieCatalog() {
 
       <section>
         <h3 className="font-semibold text-xl mb-2">📸 Screenshots</h3>
-        <div className="flex flex-col gap-4">Em construção</div>
+        <div className="flex flex-col gap-4">
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/home-dark.png`}
+            alt="Home page modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/home-light.png`}
+            alt="Home page modo claro"
+            className="rounded-lg shadow-lg"
+          />
+
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/search-dark.png`}
+            alt="Search page modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/search-light.png`}
+            alt="Search page modo claro"
+            className="rounded-lg shadow-lg"
+          />
+
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/details-dark.png`}
+            alt="Details page modo escuro"
+            className="rounded-lg shadow-lg"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/details-light.png`}
+            alt="Details page modo claro"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
       </section>
     </div>
   )
