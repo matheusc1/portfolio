@@ -26,16 +26,24 @@ export function ExamScheduler() {
           administradores gerenciem dados acadêmicos e operacionais.
         </p>
         <p className="text-gray-200 leading-text">
-          O projeto foi desenvolvido como parte da formação acadêmica em Análise
-          e Desenvolvimento de Sistemas e é dividido em duas partes: uma API com
-          Node.js + Fastify e um front-end em React.
+          Projeto acadêmico desenvolvido em grupo como parte da formação em
+          Análise e Desenvolvimento de Sistemas.
+        </p>
+      </section>
+
+      <section className="space-y-4 max-w-[768px]">
+        <h3 className="font-semibold text-xl mb-2">
+          👤 Minha atuação no projeto
+        </h3>
+        <p className="text-gray-200 leading-text">
+          Atuei principalmente nas etapas de design da interface,
+          desenvolvimento do front-end e do back-end, além da integração entre
+          as camadas da aplicação.
         </p>
         <p className="text-gray-200 leading-text">
-          O projeto foi encerrado com um bom nível de conclusão, restando apenas
-          ajustes finais como mensagens de erro personalizadas, skeletons
-          durante o carregamento das informações e testes automatizados. O
-          encerramento ocorreu após uma pausa no programa EAD da faculdade, o
-          que retirou o principal foco e propósito institucional do sistema.
+          O projeto foi organizado em duas camadas principais: o back-end
+          desenvolvido com Node.js, TypeScript e Fastify, e o front-end
+          implementado em React com TypeScript.
         </p>
       </section>
 
