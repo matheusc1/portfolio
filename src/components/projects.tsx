@@ -19,7 +19,8 @@ export function Projects() {
             Veja os projetos em destaque
           </h2>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-6 pb-36">
+
+        <div className="flex flex-wrap mx-auto max-w-[1062px] justify-center gap-6 pb-36">
           <NavLink
             to="/my-book-list"
             className="w-[330px] h-[280px] bg-gray-400 border-2 border-transparent p-3 rounded-xl space-y-5 cursor-pointer shadow-md shadow-black/25 hover:border-gray-300"
