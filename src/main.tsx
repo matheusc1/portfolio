@@ -6,6 +6,7 @@ import { createHashRouter, RouterProvider } from 'react-router'
 import { ExamScheduler } from './pages/exam-scheduler.tsx'
 import { MyBookList } from './pages/my-book-list.tsx'
 import { MovieCatalog } from './pages/movie-catalog.tsx'
+import { PromptForge } from './pages/prompt-forge.tsx'
 
 const router = createHashRouter([
   {
@@ -25,6 +26,10 @@ const router = createHashRouter([
     path: '/movie-catalog',
     Component: MovieCatalog,
   },
+  {
+    path: '/prompt-forge',
+    Component: PromptForge,
+  }
 ])
 
 createRoot(document.getElementById('root')!).render(
