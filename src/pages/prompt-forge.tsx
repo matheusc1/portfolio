@@ -26,7 +26,7 @@ export function PromptForge() {
             >
               prompt-forge-wheat.vercel.app
             </a>
-            <span className="text-gray-400 text-sm">
+            <span className="text-gray-300 text-sm">
               (pode ter lentidão nas requisições por conta da hospedagem do
               back-end no Render)
             </span>

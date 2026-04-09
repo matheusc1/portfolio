@@ -8,6 +8,7 @@ export function AboutMe() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
+        className="max-w-[720px] mx-auto px-6"
       >
         <p className="text-red font-subtitle leading-title text-xl">
           Sobre mim
@@ -15,25 +16,16 @@ export function AboutMe() {
         <h2 className="text-gray-100 font-title leading-title text-2xl text-shadow-sm/40">
           Quem está por trás do código
         </h2>
-        <p className="text-gray-200 leading-text pt-12 max-w-[720px] mx-auto text-left">
-          Desde meados de 2022, venho me dedicando à programação, sempre
-          buscando transformar ideias em soluções reais. Sou formado em Análise
-          e Desenvolvimento de Sistemas e meu foco principal é o desenvolvimento
-          Front-End, criando interfaces modernas, responsivas e com foco na
-          experiência do usuário usando React.
+        <p className="text-gray-200 leading-text pt-8 text-left">
+          Desenvolvedor Front-End com foco em React, formado em Análise e
+          Desenvolvimento de Sistemas. Desde 2022 venho me dedicando a
+          transformar ideias em interfaces modernas, responsivas e centradas na
+          experiência do usuário. Quando necessário, estendo isso ao back-end
+          com Node.js para entregas full stack.
         </p>
-        <p className="text-gray-200 leading-text max-w-[720px] mx-auto text-left">
-          Também exploro o back-end com Node.js, desenvolvendo projetos full
-          stack do início ao fim quando necessário. Gosto de unir design e
-          funcionalidade, escrevendo código limpo e buscando sempre evoluir como
-          desenvolvedor. Estou sempre em busca de novos desafios para aplicar e
-          aprimorar minhas habilidades.
-        </p>
-        <p className="text-gray-200 leading-text max-w-[720px] mx-auto text-left">
-          Atualmente, estou buscando oportunidades para colaborar em projetos
-          onde eu possa contribuir e continuar evoluindo como desenvolvedor. Meu
-          foco é sempre entregar soluções bem estruturadas e funcionais, unindo
-          eficiência e estética.
+        <p className="text-gray-200 leading-text pt-2 text-left">
+          Atualmente em busca de oportunidades para contribuir em projetos
+          desafiadores, unindo código limpo, design e funcionalidade.
         </p>
       </motion.section>
     </div>

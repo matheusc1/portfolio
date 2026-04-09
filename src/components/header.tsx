@@ -4,8 +4,7 @@ import React from '../assets/react.svg'
 import JavaScript from '../assets/javascript.svg'
 import TypeScript from '../assets/typescript.svg'
 import GitHub from '../assets/github.svg'
-import Html from '../assets/html.svg'
-import Css from '../assets/css.svg'
+import Nodejs from '../assets/nodejs.svg'
 import { TypewriterTitle } from './type-write-title'
 
 type HeaderProps = {
@@ -32,13 +31,12 @@ export function Header({ onScrollClick }: HeaderProps) {
         <TypewriterTitle title="Desenvolvedor Front-End" />
       </div>
 
-      <p className="text-gray-300 max-w-[680px] text-sm leading-text mt-5">
-        Transformo necessidades em aplicações reais, evolventes e funcionais.
-        Desenvolvo sistemas através da minha paixão pela tecnologia,
-        contribuindo com soluções inovadoras e eficazes para desafios complexos.
+      <p className="text-gray-300 max-w-[680px] leading-text mt-5">
+        Transformo necessidades em aplicações reais, focando em interfaces
+        modernas, código limpo e boa experiência para o usuário.
       </p>
 
-      <div className="flex justify-center gap-4 mt-20 flex-wrap">
+      <div className="flex justify-center gap-4 mt-10 flex-wrap">
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
           <img src={React} alt="React logo" className="size-6" />
           <span className="text-gray-200 leading-text">React</span>
@@ -60,18 +58,14 @@ export function Header({ onScrollClick }: HeaderProps) {
           <span className="text-gray-200 leading-text">Github</span>
         </div>
         <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={Html} alt="HTML logo" className="size-6" />
-          <span className="text-gray-200 leading-text">HTML</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={Css} alt="CSS logo" className="size-6" />
-          <span className="text-gray-200 leading-text">CSS</span>
+          <img src={Nodejs} alt="Node.js logo" className="size-6" />
+          <span className="text-gray-200 leading-text">Node.js</span>
         </div>
       </div>
 
       <LucideChevronsDown
         onClick={onScrollClick}
-        className="text-gray-300 mt-24 size-9 cursor-pointer animate-bounce"
+        className="text-gray-300 mt-32 size-9 cursor-pointer animate-bounce"
       />
     </div>
   )
