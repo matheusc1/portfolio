@@ -1,182 +1,157 @@
-import { LucideArrowLeft } from 'lucide-react'
-import { NavLink } from 'react-router'
+import { ProjectLayout } from '../components/project-layout'
+import { ProjectSection } from '../components/project-section'
+
+const FRONTEND = [
+  'React',
+  'TypeScript',
+  'Tailwind CSS',
+  'TanStack Query',
+  'shadcn/ui',
+  'Axios',
+]
+const BACKEND = ['Node.js', 'Fastify', 'TypeScript', 'Zod']
+
+const SCREENSHOTS = [
+  { src: 'login-dark', alt: 'Login — modo escuro' },
+  { src: 'login-light', alt: 'Login — modo claro' },
+  { src: 'enrollment-dark', alt: 'Matrículas — modo escuro' },
+  { src: 'enrollment-light', alt: 'Matrículas — modo claro' },
+  { src: 'schedules-dark', alt: 'Agendamentos — modo escuro' },
+  { src: 'schedules-light', alt: 'Agendamentos — modo claro' },
+  { src: 'schedule-dark', alt: 'Agendamento — modo escuro' },
+  { src: 'schedule-light', alt: 'Agendamento — modo claro' },
+]
 
 export function ExamScheduler() {
   return (
-    <div className="w-full bg-gray-950 text-gray-100 flex flex-col items-start px-20 py-20 gap-10">
-      <div className="space-y-2">
-        <NavLink
-          to="/"
-          className="flex gap-2 items-center text-blue-400 font-medium hover:underline"
-        >
-          <LucideArrowLeft className="size-5" />
-          Voltar
-        </NavLink>
-        <h2 className="font-title text-3xl leading-tight text-shadow-lg/40">
-          Exam Scheduler
-        </h2>
-      </div>
-
-      <section className="space-y-4 max-w-[768px]">
-        <p className="text-gray-200 leading-text">
-          <strong className="font-bold text-gray-100">Exam Scheduler</strong> é
-          um sistema Full Stack criado para facilitar o agendamento de
-          avaliações na UNIFAA. A aplicação permite que estudantes agendem
-          provas, que coordenadores visualizem os agendamentos e que
-          administradores gerenciem dados acadêmicos e operacionais.
+    <ProjectLayout title="Exam Scheduler">
+      <ProjectSection title="Sobre o projeto">
+        <p className="font-sans text-gray-200 leading-text text-sm">
+          <strong className="font-semibold text-gray-100">
+            Exam Scheduler
+          </strong>{' '}
+          é um sistema Full Stack criado para facilitar o agendamento de
+          avaliações na UNIFAA. Estudantes agendam provas, coordenadores
+          visualizam agendamentos e administradores gerenciam dados acadêmicos.
         </p>
-        <p className="text-gray-200 leading-text">
+        <p className="font-sans text-gray-200 leading-text text-sm">
           Projeto acadêmico desenvolvido em grupo como parte da formação em
           Análise e Desenvolvimento de Sistemas.
         </p>
-      </section>
+      </ProjectSection>
 
-      <section className="space-y-4 max-w-[768px]">
-        <h3 className="font-semibold text-xl mb-2">
-          👤 Minha atuação no projeto
-        </h3>
-        <p className="text-gray-200 leading-text">
-          Atuei principalmente nas etapas de design da interface,
-          desenvolvimento do front-end e do back-end, além da integração entre
-          as camadas da aplicação.
+      <ProjectSection title="Minha atuação">
+        <p className="font-sans text-gray-200 leading-text text-sm">
+          Atuei no design da interface, desenvolvimento front-end e back-end, e
+          integração entre as camadas. Organizado em duas camadas: back-end com
+          Node.js + Fastify e front-end com React + TypeScript.
         </p>
-        <p className="text-gray-200 leading-text">
-          O projeto foi organizado em duas camadas principais: o back-end
-          desenvolvido com Node.js, TypeScript e Fastify, e o front-end
-          implementado em React com TypeScript.
-        </p>
-      </section>
+      </ProjectSection>
 
-      <section className="space-y-4 max-w-[768px]">
-        <h3 className="font-semibold text-xl mb-2">⚙️ Desafios técnicos</h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
+      <ProjectSection title="Desafios técnicos">
+        <ul className="font-sans text-gray-200 text-sm leading-text space-y-3 list-disc list-inside">
           <li>
-            Este foi meu primeiro projeto completo utilizando{' '}
-            <strong className="text-gray-100">Node.js e Fastify</strong>, o que
-            exigiu aprendizado prático da linguagem e do framework durante o
-            desenvolvimento.
+            Primeiro projeto completo com{' '}
+            <strong className="text-gray-100">Node.js e Fastify</strong> —
+            aprendizado prático durante o desenvolvimento.
           </li>
           <li>
-            Como ainda não tinha muita referência de projetos back-end, a{' '}
-            <strong className="text-gray-100">arquitetura da API</strong> foi um
-            desafio. Optei por uma estrutura que priorizasse a separação de
-            responsabilidades e a reutilização de código, mesmo sem saber se era
-            o padrão mais ideal.
+            <strong className="text-gray-100">Arquitetura da API</strong> sem
+            referências anteriores — priorizei separação de responsabilidades e
+            reuso de código.
           </li>
           <li>
-            A implementação da{' '}
-            <strong className="text-gray-100">
-              autenticação com controle de acesso
-            </strong>{' '}
-            também foi desafiadora. O sistema exigia regras diferentes para
-            estudantes, coordenadores e administradores, então precisei
-            estruturar uma lógica de{' '}
-            <strong className="text-gray-100">roles</strong> que garantisse a
-            segurança e o acesso adequado a cada rota.
+            <strong className="text-gray-100">Autenticação com roles</strong>{' '}
+            para três perfis distintos (estudante, coordenador, administrador),
+            garantindo acesso adequado por rota.
           </li>
         </ul>
-      </section>
+      </ProjectSection>
 
-      <section>
-        <h3 className="font-semibold text-xl mb-2">🛠 Tecnologias utilizadas</h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
-          <li>React + TypeScript</li>
-          <li>Tailwind CSS e shadcn/ui</li>
-          <li>React Hook Form + Zod</li>
-          <li>Tanstack Query + Axios</li>
-          <li>Day.js</li>
-          <li>Node.js + Fastify</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 className="font-semibold text-xl mb-2">
-          🚀 Funcionalidades principais
-        </h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
-          <li>Estudantes podem agendar e reagendar avaliações</li>
+      <ProjectSection title="Funcionalidades">
+        <ul className="font-sans text-gray-200 text-sm leading-text space-y-2 list-disc list-inside">
+          <li>Estudantes agendam e reagendam avaliações</li>
           <li>Coordenadores filtram agendamentos por polo</li>
           <li>
-            Administradores gerenciam polos, períodos, disciplinas, alunos e
-            horários
+            Administradores gerenciam polos, períodos, disciplinas e horários
           </li>
         </ul>
-      </section>
+      </ProjectSection>
 
-      <section>
-        <h3 className="font-semibold text-xl mb-2">🔗 Repositórios</h3>
-        <div className="mb-1">
-          <span>Front-End: </span>
-          <a
-            href="https://github.com/matheusc1/exam-scheduler"
-            className="text-blue-400 hover:underline mb-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/matheusc1/exam-scheduler
-          </a>
+      <ProjectSection title="Stack">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <p className="font-subtitle text-gray-300 text-xs tracking-[0.15em] uppercase mb-3">
+              Front-end
+            </p>
+            <ul className="space-y-2">
+              {FRONTEND.map(item => (
+                <li key={item} className="flex items-center gap-2.5">
+                  <span className="w-1 h-1 rounded-full bg-cyan flex-shrink-0" />
+                  <span className="font-sans text-gray-200 text-sm">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="font-subtitle text-gray-300 text-xs tracking-[0.15em] uppercase mb-3">
+              Back-end
+            </p>
+            <ul className="space-y-2">
+              {BACKEND.map(item => (
+                <li key={item} className="flex items-center gap-2.5">
+                  <span className="w-1 h-1 rounded-full bg-cyan flex-shrink-0" />
+                  <span className="font-sans text-gray-200 text-sm">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div>
-          <span>Back-End: </span>
-          <a
-            href="https://github.com/matheusc1/exam-scheduler-server"
-            className="text-blue-400 hover:underline mb-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/matheusc1/exam-scheduler-server
-          </a>
-        </div>
-      </section>
+      </ProjectSection>
 
-      <section>
-        <h3 className="font-semibold text-xl mb-2">📸 Screenshots</h3>
+      <ProjectSection title="Repositórios">
+        <div className="space-y-1">
+          <div>
+            <span className="font-sans text-gray-300 text-sm">Front-end: </span>
+            <a
+              href="https://github.com/matheusc1/exam-scheduler"
+              target="_blank"
+              rel="noreferrer"
+              className="font-sans text-cyan text-sm hover:underline"
+            >
+              github.com/matheusc1/exam-scheduler
+            </a>
+          </div>
+          <div>
+            <span className="font-sans text-gray-300 text-sm">Back-end: </span>
+            <a
+              href="https://github.com/matheusc1/exam-scheduler-server"
+              target="_blank"
+              rel="noreferrer"
+              className="font-sans text-cyan text-sm hover:underline"
+            >
+              github.com/matheusc1/exam-scheduler-server
+            </a>
+          </div>
+        </div>
+      </ProjectSection>
+
+      <ProjectSection title="Screenshots">
         <div className="flex flex-col gap-4">
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/login-dark.png`}
-            alt="Login modo claro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/login-light.png`}
-            alt="Login modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/enrollment-dark.png`}
-            alt="Painel de matrículas modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/enrollment-light.png`}
-            alt="Painel de matrículas modo claro"
-            className="rounded-lg shadow-lg"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/schedules-dark.png`}
-            alt="Avaliações agendadas modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/schedules-light.png`}
-            alt="Avaliações agendadas modo claro"
-            className="rounded-lg shadow-lg"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/schedule-dark.png`}
-            alt="Painel de agendamento de avaliações para alunos modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/schedule-light.png`}
-            alt="Painel de agendamento de avaliações para alunos modo claro"
-            className="rounded-lg shadow-lg"
-          />
+          {SCREENSHOTS.map(({ src, alt }) => (
+            <img
+              key={src}
+              src={`${import.meta.env.BASE_URL}screenshots/exam-scheduler/${src}.png`}
+              alt={alt}
+              className="rounded-xl border border-border"
+            />
+          ))}
         </div>
-      </section>
-    </div>
+      </ProjectSection>
+    </ProjectLayout>
   )
 }

@@ -1,72 +1,111 @@
-import { LucideChevronsDown, LucideCode2 } from 'lucide-react'
-import Next from '../assets/next.svg'
-import React from '../assets/react.svg'
-import JavaScript from '../assets/javascript.svg'
-import TypeScript from '../assets/typescript.svg'
-import GitHub from '../assets/github.svg'
-import Nodejs from '../assets/nodejs.svg'
-import { TypewriterTitle } from './type-write-title'
+import { useEffect, useRef } from 'react'
+import { LucideArrowDown } from 'lucide-react'
 
 type HeaderProps = {
   onScrollClick: () => void
 }
 
+const TECH_STACK = [
+  'React',
+  'TypeScript',
+  'TanStack',
+  'Next.js',
+  'Node.js',
+  'PostgreSQL',
+]
+
 export function Header({ onScrollClick }: HeaderProps) {
+  const heroRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const hero = heroRef.current
+    if (!hero) return
+    const onMove = (e: MouseEvent) => {
+      const r = hero.getBoundingClientRect()
+      hero.style.setProperty('--gx', `${e.clientX - r.left}px`)
+      hero.style.setProperty('--gy', `${e.clientY - r.top}px`)
+    }
+    hero.addEventListener('mousemove', onMove)
+    return () => hero.removeEventListener('mousemove', onMove)
+  }, [])
+
   return (
-    <div className="bg-[url(/top-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
-      <div className="relative inline-block rounded-full border-2 border-red mt-10">
-        <img
-          src={`${import.meta.env.BASE_URL}avatar.jpg`}
-          alt="profile"
-          className="rounded-full p-1 size-24"
-        />
-        <LucideCode2 className="text-green size-8 absolute -bottom-2 -right-1.5 bg-gray-500 rounded-full" />
-      </div>
-
-      <div className="space-y-2 mt-16">
-        <p className="text-gray-200 font-subtitle leading-title text-xl">
-          Hello! Meu nome é <span className="text-red">Matheus Cardoso</span> e
-          sou
-        </p>
-        <TypewriterTitle title="Desenvolvedor Front-End" />
-      </div>
-
-      <p className="text-gray-300 max-w-[680px] leading-text mt-5">
-        Transformo necessidades em aplicações reais, focando em interfaces
-        modernas, código limpo e boa experiência para o usuário.
-      </p>
-
-      <div className="flex justify-center gap-4 mt-10 flex-wrap">
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={React} alt="React logo" className="size-6" />
-          <span className="text-gray-200 leading-text">React</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={Next} alt="Next.js logo" className="size-6" />
-          <span className="text-gray-200 leading-text">Next.js</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={TypeScript} alt="Typescript logo" className="size-6" />
-          <span className="text-gray-200 leading-text">TypeScript</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={JavaScript} alt="Javascript logo" className="size-6" />
-          <span className="text-gray-200 leading-text">JavaScript</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={GitHub} alt="GitHub logo" className="size-6" />
-          <span className="text-gray-200 leading-text">Github</span>
-        </div>
-        <div className="bg-gray-400 px-4 h-10 flex items-center justify-center gap-2 rounded-full">
-          <img src={Nodejs} alt="Node.js logo" className="size-6" />
-          <span className="text-gray-200 leading-text">Node.js</span>
-        </div>
-      </div>
-
-      <LucideChevronsDown
-        onClick={onScrollClick}
-        className="text-gray-300 mt-32 size-9 cursor-pointer animate-bounce"
+    <div
+      ref={heroRef}
+      className="relative h-dvh w-full flex flex-col items-center justify-center overflow-hidden bg-gray-600"
+      style={{ '--gx': '50%', '--gy': '50%' } as React.CSSProperties}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 transition-opacity"
+        style={{
+          background:
+            'radial-gradient(700px circle at var(--gx) var(--gy), rgba(6,182,212,0.09), transparent 65%)',
+        }}
       />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 hero-grid"
+      />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 85% 70% at 50% 50%, transparent 35%, #080808 100%)',
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col items-center text-center px-6">
+        <div className="flex items-center gap-3 mb-10">
+          <div className="h-px w-10 bg-cyan" />
+          <span className="font-subtitle text-cyan text-xs tracking-[0.22em] uppercase">
+            Desenvolvedor Front-End
+          </span>
+          <div className="h-px w-10 bg-cyan" />
+        </div>
+
+        <h1
+          className="font-title leading-none mb-8 select-none"
+          aria-label="Matheus Cardoso"
+        >
+          <span className="block text-[clamp(3.5rem,11vw,8.5rem)] font-black text-gray-100 tracking-tighter">
+            MATHEUS
+          </span>
+          <span className="block text-[clamp(3.5rem,11vw,8.5rem)] font-black tracking-tighter name-outline">
+            CARDOSO
+          </span>
+        </h1>
+
+        <p className="font-sans text-gray-200 max-w-[440px] leading-text mb-10 text-sm">
+          Transformo ideias em interfaces modernas, responsivas e centradas na
+          experiência do usuário.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-2">
+          {TECH_STACK.map(tech => (
+            <span
+              key={tech}
+              className="font-subtitle text-xs text-gray-200 border border-border px-3 py-1.5 rounded-full hover:border-cyan hover:text-cyan transition-colors duration-200"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <button
+        type="button"
+        onClick={onScrollClick}
+        className="absolute bottom-8 flex flex-col items-center gap-2 text-gray-300 hover:text-cyan transition-colors duration-300 cursor-pointer"
+      >
+        <span className="font-subtitle text-[10px] tracking-[0.3em] uppercase">
+          Scroll
+        </span>
+        <LucideArrowDown className="size-3.5 animate-bounce" />
+      </button>
     </div>
   )
 }

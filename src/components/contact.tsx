@@ -6,79 +6,78 @@ import {
   LucideMail,
 } from 'lucide-react'
 
+const LINKS = [
+  {
+    href: 'https://www.linkedin.com/in/matheusc1/',
+    icon: LucideLinkedin,
+    label: 'LinkedIn',
+    fill: true,
+  },
+  {
+    href: 'https://github.com/matheusc1',
+    icon: LucideGithub,
+    label: 'GitHub',
+    fill: false,
+  },
+  {
+    href: 'mailto:cardoso.matheusbs@gmail.com',
+    icon: LucideMail,
+    label: 'E-mail',
+    fill: false,
+  },
+]
+
 export function Contact() {
   return (
-    <div className="bg-[url(/bottom-cover.png)] bg-cover bg-top h-full w-full px-5 md:px-0 flex flex-col items-center justify-center text-center">
-      <div className="space-y-2">
-        <p className="text-purple font-subtitle leading-title text-xl">
-          Contato
-        </p>
-        <h2 className="text-gray-100 font-title leading-title text-2xl text-shadow-sm/40">
-          Gostou do meu trabalho?
+    <section className="bg-gray-600 py-32 px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-[520px] mx-auto text-center"
+      >
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="h-px w-10 bg-cyan" />
+          <span className="font-subtitle text-cyan text-xs tracking-[0.22em] uppercase">
+            Contato
+          </span>
+          <div className="h-px w-10 bg-cyan" />
+        </div>
+        <h2 className="font-title text-gray-100 font-black text-3xl mt-4 mb-4">
+          Vamos trabalhar juntos?
         </h2>
-        <span className="text-gray-200 leading-text">
-          Entre em contato ou acompanhe as minhas redes sociais!
-        </span>
-      </div>
+        <p className="font-sans text-gray-200 text-sm leading-text mb-12">
+          Estou disponível para oportunidades de emprego e projetos freelance.
+          Entre em contato.
+        </p>
 
-      <div className="flex flex-col gap-4 mt-12">
-        <motion.a
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0 }}
-          viewport={{ once: true }}
-          className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
-          href="https://www.linkedin.com/in/matheusc1/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex gap-4">
-            <LucideLinkedin className="size-6 text-gray-300 fill-gray-300 group-[:hover]:text-blue group-[:hover]:fill-blue" />
-            <span className="text-gray-200 leading-text font-medium">
-              LinkedIn
-            </span>
-          </div>
-          <LucideArrowUpRight className="text-blue" />
-        </motion.a>
-
-        <motion.a
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          viewport={{ once: true }}
-          className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
-          href="https://github.com/matheusc1"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex gap-4">
-            <LucideGithub className="size-6 text-gray-300 group-[:hover]:text-blue" />
-            <span className="text-gray-200 leading-text font-medium">
-              GitHub
-            </span>
-          </div>
-          <LucideArrowUpRight className="text-blue" />
-        </motion.a>
-
-        <motion.a
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="group w-[400px] h-[68px] p-6 gap-4 flex justify-between items-center bg-gray-400 rounded-lg border-2 border-transparent hover:border-blue focus-visible:border-blue focus-visible:outline-none"
-          href="mailto:cardoso.matheusbs@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex gap-4">
-            <LucideMail className="size-6 text-gray-300 group-[:hover]:text-blue" />
-            <span className="text-gray-200 leading-text font-medium">
-              E-mail
-            </span>
-          </div>
-          <LucideArrowUpRight className="text-blue" />
-        </motion.a>
-      </div>
-    </div>
+        <div className="flex flex-col gap-3">
+          {LINKS.map(({ href, icon: Icon, label, fill }, i) => (
+            <motion.a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="group flex items-center justify-between px-6 py-4 bg-gray-400 border border-border rounded-xl hover:border-cyan transition-colors duration-300"
+            >
+              <div className="flex items-center gap-4">
+                <Icon
+                  className={`size-5 text-gray-300 group-hover:text-cyan transition-colors duration-300 ${fill ? 'fill-gray-300 group-hover:fill-cyan' : ''}`}
+                />
+                <span className="font-sans text-gray-200 text-sm font-medium group-hover:text-gray-100 transition-colors duration-300">
+                  {label}
+                </span>
+              </div>
+              <LucideArrowUpRight className="size-4 text-gray-300 group-hover:text-cyan transition-colors duration-300" />
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   )
 }

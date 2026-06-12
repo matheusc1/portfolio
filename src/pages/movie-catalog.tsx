@@ -1,148 +1,103 @@
-import { LucideArrowLeft } from 'lucide-react'
-import { NavLink } from 'react-router'
+import { ProjectLayout } from '../components/project-layout'
+import { ProjectSection } from '../components/project-section'
+
+const STACK = [
+  'React',
+  'TypeScript',
+  'Tailwind CSS',
+  'TanStack Query',
+  'TMDB API',
+]
+
+const SCREENSHOTS = [
+  { src: 'home-dark', alt: 'Home — modo escuro' },
+  { src: 'home-light', alt: 'Home — modo claro' },
+  { src: 'search-dark', alt: 'Search — modo escuro' },
+  { src: 'search-light', alt: 'Search — modo claro' },
+  { src: 'details-dark', alt: 'Details — modo escuro' },
+  { src: 'details-light', alt: 'Details — modo claro' },
+]
 
 export function MovieCatalog() {
   return (
-    <div className="w-full bg-gray-950 text-gray-100 flex flex-col items-start px-20 py-20 gap-10">
-      <section className="space-y-2">
-        <NavLink
-          to="/"
-          className="flex gap-2 items-center text-blue-400 font-medium hover:underline"
-        >
-          <LucideArrowLeft className="size-5" />
-          Voltar
-        </NavLink>
+    <ProjectLayout
+      title="Movie Catalog"
+      liveUrl="https://movie-catalog-sage.vercel.app/"
+    >
+      <ProjectSection title="Sobre o projeto">
+        <p className="font-sans text-gray-200 leading-text text-sm">
+          <strong className="font-semibold text-gray-100">Movie Catalog</strong>{' '}
+          é uma aplicação para explorar filmes via API do TMDB. Permite buscar
+          títulos, visualizar informações detalhadas e descobrir os mais
+          populares do momento.
+        </p>
+        <p className="font-sans text-gray-200 leading-text text-sm">
+          Criado para explorar e testar ideias de design, usabilidade e
+          responsividade, com foco em UI e apresentação de informações.
+        </p>
+      </ProjectSection>
+
+      <ProjectSection title="Funcionalidades">
+        <ul className="font-sans text-gray-200 text-sm leading-text space-y-2 list-disc list-inside">
+          <li>20 filmes mais populares do momento via TMDB</li>
+          <li>Pesquisa por título</li>
+          <li>Página de detalhes com sinopse, avaliação e mais</li>
+          <li>Tema claro e escuro com alternância dinâmica</li>
+        </ul>
+      </ProjectSection>
+
+      <ProjectSection title="Stack">
+        <ul className="space-y-2">
+          {STACK.map(item => (
+            <li key={item} className="flex items-center gap-2.5">
+              <span className="w-1 h-1 rounded-full bg-cyan flex-shrink-0" />
+              <span className="font-sans text-gray-200 text-sm">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </ProjectSection>
+
+      <ProjectSection title="Recursos">
         <div className="space-y-1">
-          <h2 className="font-title text-3xl leading-tight text-shadow-lg/40">
-            Movie Catalog
-          </h2>
-          <div className="space-x-1.5">
-            <span>🔗</span>
+          <div>
+            <span className="font-sans text-gray-300 text-sm">
+              Código fonte:{' '}
+            </span>
             <a
-              href="https://movie-catalog-sage.vercel.app/"
-              className="text-blue-400 hover:underline mb-1"
+              href="https://github.com/matheusc1/movie-catalog"
               target="_blank"
               rel="noreferrer"
+              className="font-sans text-cyan text-sm hover:underline"
             >
-              movie-catalog-sage.vercel.app
+              github.com/matheusc1/movie-catalog
+            </a>
+          </div>
+          <div>
+            <span className="font-sans text-gray-300 text-sm">Figma: </span>
+            <a
+              href="https://www.figma.com/design/8FRBJSj3mKpcv6s6ZulXaE/movie-catalog?node-id=82-2"
+              target="_blank"
+              rel="noreferrer"
+              className="font-sans text-cyan text-sm hover:underline"
+            >
+              figma.com/design
             </a>
           </div>
         </div>
-      </section>
+      </ProjectSection>
 
-      <section className="space-y-4 max-w-[768px]">
-        <p className="text-gray-200 leading-text">
-          <strong className="font-bold text-gray-100">Movie Catalog</strong> é
-          uma aplicação web para explorar filmes utilizando a API do TMDB (The
-          Movie Database). O sistema permite buscar títulos, visualizar
-          informações detalhadas e descobrir os filmes mais populares do
-          momento.
-        </p>
-        <p className="text-gray-200 leading-text">
-          O projeto foi desenvolvido como uma base para testes e validação de
-          ideias para uma aplicação maior. O foco esteve na criação de uma
-          estrutura sólida e na experimentação de interfaces e fluxos de
-          usuário.
-        </p>
-      </section>
-
-      <section>
-        <h3 className="font-semibold text-xl mb-2">
-          🚀 Funcionalidades principais
-        </h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
-          <li>Descobrir os 20 filmes mais populares do momento pelo TMDB</li>
-          <li>Pesquisar por filmes específicos</li>
-          <li>
-            Visualizar detalhes dos filmes, incluindo sinopse, avaliação e mais
-          </li>
-          <li>Suporte a tema claro e escuro, com alternância dinâmica.</li>
-        </ul>
-      </section>
-
-      <section className="space-y-4 max-w-[768px]">
-        <h3 className="font-semibold text-xl mb-2">🛠️ Foco do projeto</h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
-          <li>
-            Projeto criado para explorar e testar ideias de design, usabilidade
-            e responsividade.
-          </li>
-          <li>Focado em UI, navegação e apresentação de informações.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 className="font-semibold text-xl mb-2">🛠 Tecnologias utilizadas</h3>
-        <ul className="list-disc list-inside space-y-1 text-gray-300">
-          <li>React + TypeScript</li>
-          <li>Tailwind CSS</li>
-          <li>Tanstack Query</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 className="font-semibold text-xl mb-2">🔗 Recursos do projeto</h3>
-        <div className="mb-1">
-          <span>Código fonte: </span>
-          <a
-            href="https://github.com/matheusc1/movie-catalog"
-            className="text-blue-400 hover:underline mb-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/matheusc1/movie-catalog
-          </a>
-        </div>
-        <div className="mb-1">
-          <span>Design / Protótipo (Figma): </span>
-          <a
-            href="https://www.figma.com/design/8FRBJSj3mKpcv6s6ZulXaE/movie-catalog?node-id=82-2&t=3sWvVZyVZViMxsif-1"
-            className="text-blue-400 hover:underline mb-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            figma.com/design
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <h3 className="font-semibold text-xl mb-2">📸 Screenshots</h3>
+      <ProjectSection title="Screenshots">
         <div className="flex flex-col gap-4">
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/home-dark.png`}
-            alt="Home page modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/home-light.png`}
-            alt="Home page modo claro"
-            className="rounded-lg shadow-lg"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/search-dark.png`}
-            alt="Search page modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/search-light.png`}
-            alt="Search page modo claro"
-            className="rounded-lg shadow-lg"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/details-dark.png`}
-            alt="Details page modo escuro"
-            className="rounded-lg shadow-lg"
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/details-light.png`}
-            alt="Details page modo claro"
-            className="rounded-lg shadow-lg"
-          />
+          {SCREENSHOTS.map(({ src, alt }) => (
+            <img
+              key={src}
+              src={`${import.meta.env.BASE_URL}screenshots/movie-catalog/${src}.png`}
+              alt={alt}
+              className="rounded-xl border border-border"
+            />
+          ))}
         </div>
-      </section>
-    </div>
+      </ProjectSection>
+    </ProjectLayout>
   )
 }
