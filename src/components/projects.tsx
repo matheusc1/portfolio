@@ -12,12 +12,12 @@ type Project = {
 }
 
 const FEATURED: Project = {
-  to: '/my-book-list',
+  to: '/mybooklist',
   image: 'mybooklist.png',
   alt: 'MyBookList',
   title: 'MyBookList',
   description:
-    'Aplicação para registros de leituras e acompanhamento de métricas de leitura.',
+    'Aplicação para registrar leituras, acompanhar métricas e organizar a biblioteca pessoal.',
   tags: ['React', 'TypeScript', 'TanStack', 'NestJS', 'PostgreSQL'],
 }
 
