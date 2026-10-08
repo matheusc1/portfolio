@@ -45,6 +45,7 @@ const FEATURES = [
   'Teste e acompanhamento da velocidade de leitura (páginas por minuto)',
   'Metas anuais de leitura com acompanhamento de progresso',
   'Login com Google ou GitHub',
+  'Interface responsiva com layouts adaptados para mobile, tablet e desktop',
 ]
 
 const SCREENSHOTS = [
@@ -60,6 +61,12 @@ const SCREENSHOTS = [
   },
   { src: 'landing', alt: 'Landing page do MyBookList' },
   { src: 'login', alt: 'Página de login com Google e GitHub' },
+]
+
+const MOBILE_SCREENSHOTS = [
+  { src: 'dashboard-mobile', alt: 'Dashboard no mobile' },
+  { src: 'books-mobile', alt: 'Biblioteca no mobile' },
+  { src: 'activity-mobile', alt: 'Calendário de atividade no mobile' },
 ]
 
 const RESOURCES = [
@@ -236,6 +243,17 @@ export function MyBookList() {
       <ProjectSection title="Screenshots">
         <div className="flex flex-col gap-4">
           {SCREENSHOTS.map(({ src, alt }) => (
+            <img
+              key={src}
+              src={`${import.meta.env.BASE_URL}screenshots/mybooklist/${src}.png`}
+              alt={alt}
+              className="rounded-xl border border-border"
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-3 gap-1">
+          {MOBILE_SCREENSHOTS.map(({ src, alt }) => (
             <img
               key={src}
               src={`${import.meta.env.BASE_URL}screenshots/mybooklist/${src}.png`}
